@@ -57,3 +57,23 @@ class Stack {
     }
 }
 ```
+
+### Stack Implementation in Arrays
+```
+class Stack {
+    constructor() {
+        this.array = [];
+    }
+    peek() {
+        this.array[this.array.length - 1];
+    }
+    push(val) {
+        this.array.push(val);
+    }
+    pop() {
+        this.array.pop();
+        return this;
+    }
+}
+
+```
