@@ -22,3 +22,37 @@
       -Printer printing items
       
     ```
+
+
+### STACK Implementation using LL
+```
+class Stack {
+    constructor() {
+        this.top = null;
+        this.bottom = null;
+        this.length = 0;
+    }
+    peek() {
+        return this.top
+    }
+    push(val) {
+        const newNode = new Node(val)
+        if (this.length === 0) {
+            this.top = newNode;
+            this.bottom = newNode;
+        } else {
+            holdingPointer = this.top;
+            this.top = newNode;
+            this.top.next = holdingPointer;
+            this.length++
+            return this
+    }
+    pop() {
+        if (!this.top) return null
+        const holdingPointer = this.top;
+        this.top = this.top.next;
+        this.length--
+        return this
+    }
+}
+```
